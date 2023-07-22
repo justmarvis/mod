@@ -1,0 +1,380 @@
+/* imports from "fonts.google.com" and "fonts.adobe.com" */
+/* @import url("/w20/css/normalize.css"); */
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Volkhov:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Rubik+Glitch&display=swap');
+
+
+/* ** GENERAL VIEW ** */
+body {
+    background-size: 5000px;
+    margin: 0;
+    font-family: Quicksand;
+    font-size: 12px;
+    font-weight: 900;
+    background-color: rgba(225, 225, 225, 0.6);
+}
+
+.byline {
+    font-family: Pacifico;
+    font-size: 12.5px;
+    color: dimgray;
+    margin-top: 35px;
+    margin-left: 4px;
+}
+.dp {
+    display: none;
+    width: 50px;
+    border-radius: 50%;
+    /* margin: 20px 20px 0px 0px; */
+}
+.profilepic {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: end;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 40px;
+}
+.profilepics {
+    position: fixed;
+    bottom: 25px;
+    display: flex;
+    width: 100%;
+    margin-left: 50px;
+    display: flex;
+    /* justify-content: center; */
+}
+.dps {
+    position: fixed;
+    bottom: 25px;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+footer {
+    display: none;
+}
+.gallery {
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+h1 a {
+    font-size: 20px;
+    font-family: "Rubik Glitch";
+    margin-left: 15px;
+    font-weight: 100;
+    margin-top: 18px;
+    color: #000;
+    text-decoration: none;
+}
+h2 {
+    font-family: "Rubik Glitch";
+}
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    margin: 0 auto;
+}
+.img {
+    /* width: 150px; */
+    margin-right: 5px;
+    margin-left: 2px;
+    margin-bottom: 5px;
+    transition: 500ms ease-in-out;
+}
+.img:focus {
+    animation: focus .5s;
+}
+.img-pop {
+    width: 200px;
+}
+@keyframes focus {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+.info {
+    margin-right: 50px;
+}
+.info p, .info2 p {
+    margin-top: 50px;
+}
+.info-contain {
+    display: flex;
+    width: 80%;
+    margin-left: 10px;
+}
+.top {
+    width: 300px;
+}
+main {
+    margin-top: 50px;
+}
+#mainHead {
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(0, 0, 0);
+    /* background: linear-gradient(180deg, #000, rgba(240, 93, 35, 100%)); */
+    background-color: rgba(225, 225, 225, 0.95);
+    /* background: transparent; */
+    background-size: 900% 300%;
+    height: 70px;
+    /* box-shadow: 0px 6px 10px -1px #3a3a3a; */
+    z-index: 20;
+}
+.mainNav {
+    display: flex;
+}
+.mainNav a {
+    display: none;
+    margin-right: 20px;
+    color: rgba(255, 165, 0, 0.8);
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+.mainNav a:hover {
+    color: rgba(255, 165, 0, 1)
+}
+.mainNav2 {
+    display: flex;
+}
+.mainNav2 a {
+    margin-right: 20px;
+    color: rgba(255, 165, 0, 0.8);
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+pre {
+    color: #808080;
+    margin-left: 15px;
+}
+p {
+    font-size: 12px;
+}
+.popup .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    display: none;
+}
+.popup .content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background: #f5f5f5;
+    width: 80%;
+    height: 60vh;
+    overflow: auto;
+    /* scroll-behavior: smooth; */
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 55;
+}
+.popup .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: #f5f5f5;
+    font-size: 25px;
+    font-weight: 600px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+} 
+.popup.active .overlay {
+    display: block;
+}
+.popup.active .content {
+    transition: all 500ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+.prof {
+    width: 100px;
+}
+#siteName {
+    display: flex;
+}
+.social {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 50%;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.style {
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 10px;
+    color: rgba(0, 0, 0, 0.8);
+    margin-left: 10px;
+    cursor:no-drop;
+}
+.styles {
+    color: rgba(0, 0, 0, 0.8);
+}
+.profile-btn2 {
+    position: absolute;
+}
+.tik, .insta {
+    color: #f5f5f5;
+    font-size: 30px;
+}
+
+
+/* carousel */
+.carousel {
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+    touch-action: pan-y;
+    margin: 0 auto;
+}
+.slides {
+display: flex;
+width: fit-content;
+transition: transform 0.3s ease-in-out;
+}
+.slide {
+width: 300px;
+height: 370px;
+
+background-color: transparent;
+transform: scale(0.8);
+}
+.button{
+    display: flex;
+    width: 50%;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+.prev-btn {
+    background-color: orange;
+    outline: none;
+    border: none;
+    color: #f5f5f5;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.prev-btn:active {
+    transform: scale(0.8);
+}
+.next-btn {
+    background-color: rgb(255, 165, 0);
+    outline: none;
+    border: none;
+    color: #f5f5f5;
+    padding: 5px 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.next-btn:active {
+    transform: scale(0.8);
+}
+/* end of carousel */
+/* ********* */
+
+/* ** DESKTOP ** */
+@media only screen and (min-width: 60rem) {
+    .dp {
+        display: inline;
+    }
+    .dps {
+        display: none;
+    }
+    .images {
+        margin: 0 auto;
+        width: 90%;
+        /* justify-content: start; */
+        padding-left: 50px;
+    }
+    .img {
+        width: 400px;
+        cursor: pointer;
+        margin-left: 5px;
+    }
+    .img:hover {
+        transform: scale(1.02);
+        opacity: 80%;
+    }
+    .img:focus {
+        transform: none;
+        animation: none;
+    }
+    .profile-btn {
+        transition: 500ms ease-in-out;
+        cursor: pointer;
+    }
+    .img:hover {
+        transform: scale(1.2);
+    }
+    .profile:active {
+        animation: active .5s;
+    }
+    @keyframes active {
+        0% {
+            transform: scale(1.2);
+        }
+        50% {
+            transform: scale(0.5);
+        }
+        100% {
+            transform: scale(1.2);
+        }
+    }
+    .social {
+        width: 20%;
+    }
+    .popup .content {
+        width: 50%;
+        height: 80vh;
+    }
+    pre {
+        margin-left: 150px;
+    }
+    .mainNav a {
+        margin-right: 20px;
+        color: rgba(255, 165, 0, 0.8);
+        font-family: Arial, Helvetica, sans-serif;
+        cursor: pointer;
+    }
+    .mainNav a:hover {
+        color: rgba(255, 165, 0, 1)
+    }
+}
