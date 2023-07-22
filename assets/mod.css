@@ -48,9 +48,6 @@ body {
     padding: 20px;
     margin-top: 40px;
 }
-footer {
-    display: none;
-}
 .gallery {
     /* max-width: 1224px; */
     width: 90%;
@@ -312,6 +309,16 @@ transform: scale(0.8);
 }
 .next-btn:active {
     transform: scale(0.8);
+}
+footer {
+    /* display: none; */
+    text-align: center;
+    font-size: 10px;
+    margin-bottom: 50px;
+}
+.copy_right {
+    text-align: center;
+    font-size: 10px;
 }
 /* end of carousel */
 /* ********* */
