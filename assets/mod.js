@@ -37,6 +37,9 @@ dateoutput.textContent = "Updated: " + weekname + ", " + date.getDate() + " " + 
 function profilePopup() {
   document.getElementById("profile2").classList.toggle("active");
 }
+function togglePopupu() {
+  document.getElementById("popup-unsee").classList.toggle("active");
+}
 function togglePopup() {
   document.getElementById("popup-1").classList.toggle("active");
 }

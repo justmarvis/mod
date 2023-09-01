@@ -93,7 +93,8 @@ pre {
 .img {
     width: 100%;
     max-width: 1224px;
-    border-radius: 5px;
+    /* border-radius: 5px; */
+    cursor: pointer;
 }
 .img:focus {
     animation: focus .5s;
@@ -344,7 +345,7 @@ footer {
         transition: .5s ease-in-out;
     }
     .img:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
         opacity: 80%;
     }
     .mainNav {
@@ -371,6 +372,12 @@ footer {
     }
     .popup .content {
         width: 50%;
+    }
+    .gallery {
+        /* max-width: 1224px; */
+        width: 90%;
+        margin: 0 auto;
+        padding: 40px 0;
     }
     .profile:active {
         animation: active .5s;
