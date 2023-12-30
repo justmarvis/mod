@@ -11,15 +11,37 @@ function slideCarousel(direction) {
   }
 
   slides.style.transform = `translateX(${currentPosition}px)`;
+
+  // Check if it's the last slide
+  const totalSlides = document.querySelectorAll('.slide').length;
+  if (currentPosition === -slideWidth * (totalSlides - 1)) {
+    // Reset to the first slide
+    currentPosition = 0;
+    slides.style.transform = `translateX(${currentPosition}px)`;
+  }
 }
+
+function autoSlide() {
+  slideCarousel('next');
+}
+
+// Set interval for automatic sliding every 5 seconds
+const slideInterval = setInterval(autoSlide, 5000);
 
 document.querySelector('.next-btn').addEventListener('click', () => {
   slideCarousel('next');
+  // Reset the interval when manually changing slides
+  clearInterval(slideInterval);
+  slideInterval = setInterval(autoSlide, 5000);
 });
 
 document.querySelector('.prev-btn').addEventListener('click', () => {
   slideCarousel('prev');
+  // Reset the interval when manually changing slides
+  clearInterval(slideInterval);
+  slideInterval = setInterval(autoSlide, 5000);
 });
+
 
 // footer
 let week_names = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
